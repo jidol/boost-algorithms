@@ -6,24 +6,27 @@
 CPP_SRCS += \
 ../AnyOf.cpp \
 ../AnyOf_test.cpp \
-../algorithm-main.cpp 
+../algorithm-main.cpp \
+../random.cpp 
 
 OBJS += \
 ./AnyOf.o \
 ./AnyOf_test.o \
-./algorithm-main.o 
+./algorithm-main.o \
+./random.o 
 
 CPP_DEPS += \
 ./AnyOf.d \
 ./AnyOf_test.d \
-./algorithm-main.d 
+./algorithm-main.d \
+./random.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
 %.o: ../%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -I/home/jidol/workspace/boost_1_60_0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

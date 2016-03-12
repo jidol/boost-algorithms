@@ -8,8 +8,6 @@
 #ifndef RANDOM_H_
 #define RANDOM_H_
 
-namespace util {
-
 #include <vector>
 
 class random {
@@ -17,9 +15,8 @@ public:
 	random();
 	virtual ~random();
 
-	std::vector<long> randomLong(int size, long start, long end);
+	static std::vector<long> randomLong(int size, long start=0, long end=1000);
 };
 
-} /* namespace util */
 
 #endif /* RANDOM_H_ */

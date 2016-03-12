@@ -18,7 +18,7 @@ public:
 	void stupidFunction();
 
 private:
-	bool isEven(long val);
+	static bool isEven(long val);
 };
 
 } /* namespace algorithm */
